@@ -1,0 +1,7 @@
+athlete_id,session_duration_min,avg_heart_rate,sleep_hours_prev_night,RPE
+1,45.0,140.0,7.0,5.0
+2,60.0,155.0,6.5,6.5
+3,,,8.0,4.0
+4,50.0,148.0,6.0,5.5
+5,,162.0,5.5,7.0
+6,40.0,135.0,7.5,

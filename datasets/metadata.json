@@ -1,0 +1,89 @@
+{
+  "contextualisation": {
+    "use_cases": "Prediction RPE",
+    "global_conxtexts": "Regression",
+    "target": "RPE"
+  },
+  "results": {
+    "dataset_shape": [
+      6,
+      5
+    ],
+    "missing_values": {
+      "missing_count": {
+        "athlete_id": 0,
+        "session_duration_min": 2,
+        "avg_heart_rate": 1,
+        "sleep_hours_prev_night": 0,
+        "RPE": 1
+      },
+      "missing_pct": {
+        "athlete_id": 0.0,
+        "session_duration_min": 0.333,
+        "avg_heart_rate": 0.167,
+        "sleep_hours_prev_night": 0.0,
+        "RPE": 0.167
+      },
+      "critical_columns": [
+        "session_duration_min",
+        "avg_heart_rate",
+        "RPE"
+      ]
+    },
+    "target_analysis": {
+      "target_column": "RPE",
+      "unique_values": 5,
+      "target_stats": {
+        "count": 5.0,
+        "mean": 5.6,
+        "std": 1.1937336386313322,
+        "min": 4.0,
+        "25%": 5.0,
+        "50%": 5.5,
+        "75%": 6.5,
+        "max": 7.0
+      }
+    },
+    "structured_info": {
+      "shape": [
+        6,
+        5
+      ],
+      "missing": {
+        "missing_count": {
+          "athlete_id": 0,
+          "session_duration_min": 2,
+          "avg_heart_rate": 1,
+          "sleep_hours_prev_night": 0,
+          "RPE": 1
+        },
+        "missing_pct": {
+          "athlete_id": 0.0,
+          "session_duration_min": 0.333,
+          "avg_heart_rate": 0.167,
+          "sleep_hours_prev_night": 0.0,
+          "RPE": 0.167
+        },
+        "critical_columns": [
+          "session_duration_min",
+          "avg_heart_rate",
+          "RPE"
+        ]
+      },
+      "target": {
+        "target_column": "RPE",
+        "unique_values": 5,
+        "target_stats": {
+          "count": 5.0,
+          "mean": 5.6,
+          "std": 1.1937336386313322,
+          "min": 4.0,
+          "25%": 5.0,
+          "50%": 5.5,
+          "75%": 6.5,
+          "max": 7.0
+        }
+      }
+    }
+  }
+}

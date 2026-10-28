@@ -1,0 +1,45 @@
+# --- Secrets ---
+.env
+*.env
+!.env.example
+config.toml
+token.text
+api.yaml
+playground/kaggle.json
+
+# --- Environnement Python ---
+venv/
+.venv/
+env/
+**/__pycache__
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Fichiers système / éditeur ---
+.DS_Store
+.vscode/
+.idea/
+POC.code-workspace
+
+# --- Artefacts d'entraînement et résultats ---
+catboost_info/
+confusion/
+metrics/*
+fig/
+*.png
+*.xlsx
+
+# --- Données volumineuses ou hors sujet ---
+datasets/json_img_dataset2/*
+datasets/data/data/winemag-data*
+
+# --- Fichiers locaux / brouillons ---
+playground/
+AISport_Interface/*
+App.py
+utils/rag_agent_agent_FAISS.py
+get-docker.sh
+package-lock.json

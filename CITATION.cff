@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ce projet, merci de citer l'article ci-dessous."
+title: "IA Sport"
+license: AGPL-3.0-only
+authors:
+  - family-names: Aiwansedo
+    given-names: Konstandinos
+  - family-names: Daoud
+    given-names: Brahim
+  - family-names: Ariouich
+    given-names: Hamza
+preferred-citation:
+  type: conference-paper
+  title: "Context-Aware AI-Based Framework for Sports Analytics"
+  authors:
+    - family-names: Aiwansedo
+      given-names: Konstandinos
+    - family-names: Daoud
+      given-names: Brahim
+    - family-names: Ariouich
+      given-names: Hamza
+  collection-title: "Proceedings of the 18th International Conference on Agents and Artificial Intelligence - Volume 4: ICAART"
+  conference:
+    name: "ICAART 2026"
+  publisher:
+    name: SciTePress
+  year: 2026
+  start: 3736
+  end: 3743
+  doi: "10.5220/0014469700004052"
+  isbn: "978-989-758-796-2"

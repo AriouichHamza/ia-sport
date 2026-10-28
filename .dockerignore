@@ -1,0 +1,48 @@
+# Git and IDE
+.git
+.gitignore
+.vscode
+POC.code-workspace
+
+# Python artifacts
+**/__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+catboost_info/
+
+# Frontend 
+AISport_Interface/*
+
+
+# Heavy Data & Documentation 
+fig/
+CI_README.md
+Exp3.ipynb
+playground/
+
+
+.env
+
+dataset/*
+
+
+!dataset/json_img_dataset2
+
+
+
+confusion/
+*.png
+utils/rag_agent_agent_FAISS.py
+catboost_info/
+POC.code-workspace
+playground/*
+metrics/*
+App.py
+AISport_Interface/*
+fig/
+playground/
+**/__pycache__
+*.pyc
+.env

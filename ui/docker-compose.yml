@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: ui/Dockerfile
+    container_name: poc_gradio_app
+    restart: unless-stopped
+    ports:
+      - "7860:7860"
+    environment:
+      # Set these in a .env file or in your deployment environment
+      - PORT=7860
+      - WEAVIATE_URL=http://weaviate:8080
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ..:/app:cached
+    depends_on:
+      - weaviate
+
+  weaviate:
+    image: semitechnologies/weaviate:1.28.2 
+    container_name: poc_weaviate
+    restart: unless-stopped
+    environment:
+      - CLUSTER_HOSTNAME=node1
+      - SINGLE_NODE_PROVISIONING=true  
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - QUERY_DEFAULTS_LIMIT=25
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - DEFAULT_VECTORIZER_MODULE=none
+    ports:
+      - "8081:8080"
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+
+volumes:
+  weaviate_data:
+
+# Notes:
+# - This compose file builds the app image using the Dockerfile at `ui/Dockerfile`.
+# - The Gradio app is expected to run on port 7860 inside the container.
+# - Environment variables (like `OPENAI_API_KEY`) should be provided securely (use an env file or CI secrets).
+# - If your Gradio app already starts a Weaviate container itself, you can remove the `weaviate` service and set `WEAVIATE_URL` accordingly.
